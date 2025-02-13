@@ -1,14 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Hero = () => {
-    const [priceValue, setPriceValue] = useState(230)
+  const [priceValue, setPriceValue] = useState(230);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: true, 
+      easing: "ease-in-out", 
+    });
+  }, []);
+
   return (
     <div className="bg-black/20 h-full">
       <div className="h-full flex justify-center items-center p-4 bg-primary/10">
         <div className="container grid grid-cols-1 gap-4">
           {/* text content section */}
           <div className="text-white">
-            <p>Our Packages</p>
+            <p 
+            data-aos="fade-up"
+            data-aos-delay="300"
+            >Our Packages</p>
             <p
               data-aos="fade-up"
               data-aos-delay="300"
@@ -18,7 +32,9 @@ const Hero = () => {
             </p>
           </div>
           {/* form section */}
-          <div className="space-y-4 bg-white rounded-md p-4 relative">
+          <div data-aos="fade-up"
+              data-aos-delay="600"
+              className="space-y-4 bg-white rounded-md p-4 relative">
             <div className="grid grid-cols-1 sm:grid-cols-3 py-3">
               <div>
                 <label htmlFor="destination" className="opacity-70">
@@ -45,26 +61,30 @@ const Hero = () => {
               </div>
               <div>
                 <label htmlFor="destination" className="opacity-70">
-                <div className="w-full flex justify-between items-center">
-                <p>Max Price</p>
-                <p className="font-bold text-xl">${priceValue}</p>
-                </div>
+                  <div className="w-full flex justify-between items-center">
+                    <p>Max Price</p>
+                    <p className="font-bold text-xl">${priceValue}</p>
+                  </div>
                 </label>
                 <div className="flex justify-between items-center bg-gray-100 p-2 rounded-full">
-                <input
-                  type="range"
-                  id="destination"
-                  name="destination"
-                  min="150"
-                  max="1000"
-                  value={priceValue}
-                  step="10"
-                  onChange={(e)=> setPriceValue(e.target.value)}
-                  className="appearence-none w-full bg-gradient-to-r my-2 range accent-primary to-secondary h-2 rounded-full"
-                />
-              </div>
+                  <input
+                    type="range"
+                    id="destination"
+                    name="destination"
+                    min="150"
+                    max="1000"
+                    value={priceValue}
+                    step="10"
+                    className="appearance-none w-full bg-gradient-to-r from-primary to-secondary h-2 rounded-full my-2"
+                    onChange={(e) => setPriceValue(e.target.value)}
+                  />
+                </div>
               </div>
             </div>
+            {/* Button */}
+            <button className="bg-gradient-to-r from-primary to-secondary text-white hover:scale-105 px-4 py-2 rounded-full duration-200 absolute -bottom-5 left-1/2 -translate-x-1/2">
+              Search Now
+            </button>
           </div>
         </div>
       </div>
