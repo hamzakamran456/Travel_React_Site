@@ -66,7 +66,7 @@ const Hero = () => {
                     <p className="font-bold text-xl">${priceValue}</p>
                   </div>
                 </label>
-                <div className="flex justify-between items-center bg-gray-100 p-2 rounded-full">
+                <div className="flex justify-between items-center bg-gray-100 p-2 rounded-full my-1">
                   <input
                     type="range"
                     id="destination"
