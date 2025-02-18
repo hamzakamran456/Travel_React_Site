@@ -41,7 +41,7 @@ const BlogsComp = () => {
         <h1 className="my-8 border-l-8 border-primary/50 pl-2 py-2 text-3xl font-bold">
           Our Latest Blogs
         </h1>
-        <div className="grid grid-cols-1 sm-grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {BlogData.map((item, index) => (
             <BlogCard key={index} {...item} />
           ))}
