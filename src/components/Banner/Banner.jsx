@@ -12,6 +12,7 @@ const Banner = () => {
             {/* image sec */}
             <div data>
               <img
+                data-aos="flip-up"
                 src={TravelImg}
                 alt=""
                 className="max-w-[450px] h-[350px] w-full mx-auto drop-shadow-[5px_5px_12px_rgba(0,0,0,0.7)] object-cover"
@@ -22,7 +23,7 @@ const Banner = () => {
               <h1 data-aos="fade-up" className="text-3xl font-bold sm:text-4xl">
                 Explore all corners of the world with us
               </h1>
-              <p className="text-sm text-gray-500 tracking-wide leading-8">
+              <p data-aos="fade-up" className="text-sm text-gray-500 tracking-wide leading-8">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit
                 animi quaerat earum quos dicta saepe quas neque?{" "}
               </p>
