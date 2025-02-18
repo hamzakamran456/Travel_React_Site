@@ -22,7 +22,7 @@ const Hero = () => {
             <p 
             data-aos="fade-up"
             data-aos-delay="300"
-            >Our Packages</p>
+            className="text-sm">Our Packages</p>
             <p
               data-aos="fade-up"
               data-aos-delay="300"
@@ -66,7 +66,7 @@ const Hero = () => {
                     <p className="font-bold text-xl">${priceValue}</p>
                   </div>
                 </label>
-                <div className="flex justify-between items-center bg-gray-100 p-2 rounded-full my-1">
+                <div className=" bg-gray-100 flex justify-between items-center p-2 rounded-full my-1">
                   <input
                     type="range"
                     id="destination"
@@ -75,7 +75,12 @@ const Hero = () => {
                     max="1000"
                     value={priceValue}
                     step="10"
-                    className="appearance-none w-full bg-gradient-to-r from-primary to-secondary h-2 rounded-full my-2"
+                    className="appearance-none w-full bg-gradient-to-r from-primary to-secondary h-2 rounded-full my-2
+                    accent-white [&::-webkit-slider-thumb]:w-5 
+                    [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:bg-white 
+                    [&::-webkit-slider-thumb]:rounded-full 
+                    [&::-webkit-slider-thumb]:border-2 
+                  [&::-webkit-slider-thumb]:border-gray-500"
                     onChange={(e) => setPriceValue(e.target.value)}
                   />
                 </div>
