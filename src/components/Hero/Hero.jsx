@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Hero = () => {
-  const [priceValue, setPriceValue] = useState(230);
+  const [priceValue, setPriceValue] = useState(40);
 
   useEffect(() => {
     AOS.init({
